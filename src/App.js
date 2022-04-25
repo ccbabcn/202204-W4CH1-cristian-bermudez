@@ -5,19 +5,19 @@ import gentlemen from "./gentlemenlist";
 
 function App() {
   const numberGentlemanPoiting = (allGentlemen) => {
-    const totalSelected = allGentlemen.filter((gentleman) => {
-      return gentleman.selected;
-    });
+    const totalSelected = allGentlemen.filter(
+      (gentleman) => gentleman.selected
+    );
     return totalSelected.length;
   };
 
-  function createGentlemanCard(allGentlemen) {
+  const createGentlemanCard = (allGentlemen) => {
     return allGentlemen.map((gentleman) => (
       <li key={gentleman.id} className={"gentleman"}>
         {<Gentleman gentleman={gentleman} />}
       </li>
     ));
-  }
+  };
 
   return (
     <div className="container">
