@@ -1,13 +1,16 @@
-const Gentleman = ({ gentlemen }) => {
+const Gentleman = ({ gentleman }) => {
   const { name, status, profession, twitter, picture, alternativeText } =
-    gentlemen;
+    gentleman;
   const firstNameLetterCapitalize = name[0].toUpperCase();
 
   return (
-    <li className="gentleman">
+    <>
       <div className="gentleman__avatar-container">
-        <img src={`./img/${picture}`} alt={alternativeText} />
-        <img className="gentleman__avatar" src=".." alt={alternativeText} />
+        <img
+          className="gentleman__avatar"
+          src={`./img/${picture}`}
+          alt={alternativeText}
+        />
         <span className="gentleman__initial">{firstNameLetterCapitalize}</span>
       </div>
       <div className="gentleman__data-container">
@@ -27,7 +30,7 @@ const Gentleman = ({ gentlemen }) => {
       </div>
       <i className="icon gentleman__icon fas fa-check"></i>
       <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
-    </li>
+    </>
   );
 };
 
